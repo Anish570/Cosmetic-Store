@@ -23,9 +23,9 @@
   --color-background: white;
   --color-foreground: pink;
   --color-btn-primary: rgb(252, 173, 173);
+  
+  /* Fonts */
   --color-lightblack: 30 30 30;
-
-  /* 🔤 Fonts */
   --font-heading: "Playfair Display", serif;
   --font-poppins: "Poppins", sans-serif;
   --font-roboto: "Roboto Condensed", sans-serif;
@@ -33,9 +33,12 @@
   /* 📐 Sizes & Layout */
   --text-smalldevice: 0.875rem;
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --color-lightblack: 30 30 30;
 
+  /* 🎨 Heights */
   --height-navbar: 10vh;
-  --height-main: calc(100vh - var(--height-navbar));
+  --height-main: calc(100vh - var(--height-navbar) - 64px);
+}
 
   /* 📱 Page Padding (responsive) */
   --padding-page: 1%; /* default (mobile) */
@@ -85,6 +88,30 @@
     height: var(--height-main);
   }
 
+  .text-smalldevice {
+    font-size: var(--text-smalldevice);
+  }
+
+  .shadow-custom {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .bg-lightblack {
+    background-color: rgb(var(--color-lightblack));
+  }
+
+  .text-lightblack {
+    color: rgb(var(--color-lightblack));
+  }
+
+  .bg-btn-primary {
+    background-color: var(--color-btn-primary);
+  }
+
+  .text-btn-primary {
+    color: var(--color-btn-primary);
+  }
+
   /* .page-padding {
     padding-left: var(--padding-page);
     padding-right: var(--padding-page);
@@ -113,4 +140,20 @@
     font-family: "Lavishly Yours", cursive;
     font-weight: 550;
   }
+
+  .heading-font {
+    font-family: var(--font-heading);
+  }
+
+  .poppins-font {
+    font-family: var(--font-poppins);
+  }
+
+  .roboto-font {
+    font-family: var(--font-roboto);
+  }
+}
+
+.test {
+  color: rgb(47, 48, 46);
 }
