@@ -34,3 +34,4 @@ dist-ssr
 # Temporary files
 src/assets/
 src/routes/TemRoutes.jsx
+src/text.css

@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 /* ==========================================================================
       🌀 TAILWIND BASE IMPORT
@@ -19,9 +20,9 @@
   --color-primary-light: gray;
   --color-secondary: plum;
   --color-accent: gold;
-  --color-muted: lightgray;
+  --color-muted: lightgray
   --color-background: white;
-  --color-foreground: pink;
+  --color-foreground: rgba(252, 173, 173,.4);
   --color-btn-primary: rgb(252, 173, 173);
   
   /* Fonts */
@@ -37,8 +38,7 @@
 
   /* 🎨 Heights */
   --height-navbar: 10vh;
-  --height-main: calc(100vh - var(--height-navbar) - 64px);
-}
+  --height-main: calc(90vh - var(--height-navbar));
 
   /* 📱 Page Padding (responsive) */
   --padding-page: 1%; /* default (mobile) */
@@ -141,6 +141,10 @@
     font-weight: 550;
   }
 
+  .julius-sans-one {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+  }
   .heading-font {
     font-family: var(--font-heading);
   }
