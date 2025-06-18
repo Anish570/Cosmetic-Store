@@ -22,7 +22,7 @@
   --color-muted: lightgray;
   --color-background: white;
   --color-foreground: pink;
-  --color-btn-primary:rgb(252, 173, 173);
+  --color-btn-primary: rgb(252, 173, 173);
   /* Fonts */
   --font-heading: "Playfair Display", serif;
   --font-poppins: "Poppins", sans-serif;
@@ -32,10 +32,10 @@
   --text-smalldevice: 0.875rem;
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --color-lightblack: 30 30 30;
-  
+
   /* 🎨 Heights */
-  --height-navbar: 10vh; 
-  --height-main: calc(100vh - var(--height-navbar));
+  --height-navbar: 10vh;
+  --height-main: calc(100vh - var(--height-navbar) - 64px);
 }
 
 /* ---------------------------- */
@@ -80,8 +80,31 @@
   .h-main-content {
     height: var(--height-main);
   }
-}
 
+  .text-smalldevice {
+    font-size: var(--text-smalldevice);
+  }
+
+  .shadow-custom {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .bg-lightblack {
+    background-color: rgb(var(--color-lightblack));
+  }
+
+  .text-lightblack {
+    color: rgb(var(--color-lightblack));
+  }
+
+  .bg-btn-primary {
+    background-color: var(--color-btn-primary);
+  }
+
+  .text-btn-primary {
+    color: var(--color-btn-primary);
+  }
+}
 
 @layer components {
   .roboto-condensed-medium {
@@ -98,8 +121,20 @@
     font-family: "Lavishly Yours", cursive;
     font-weight: 550;
   }
+
+  .heading-font {
+    font-family: var(--font-heading);
+  }
+
+  .poppins-font {
+    font-family: var(--font-poppins);
+  }
+
+  .roboto-font {
+    font-family: var(--font-roboto);
+  }
 }
 
-.test{
+.test {
   color: rgb(47, 48, 46);
 }
