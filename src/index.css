@@ -1,0 +1,105 @@
+/* ---------------------------- */
+/* 🌐 FONT IMPORTS (Google)    */
+/* ---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+
+/* ---------------------------- */
+/* 🎨 TAILWIND BASE IMPORT      */
+/* ---------------------------- */
+@import "tailwindcss";
+
+/* ---------------------------- */
+/* 🎯 DESIGN TOKENS FOR TAILWIND */
+/* (tailwind v4.1 @theme block) */
+/* ---------------------------- */
+@theme {
+  --color-primary: black;
+  --color-primary-light: gray;
+  --color-secondary: plum;
+  --color-accent: gold;
+  --color-muted: lightgray;
+  --color-background: white;
+  --color-foreground: pink;
+  --color-btn-primary:rgb(252, 173, 173);
+  /* Fonts */
+  --font-heading: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto Condensed", sans-serif;
+
+  /* Sizes / Shadows */
+  --text-smalldevice: 0.875rem;
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --color-lightblack: 30 30 30;
+  
+  /* 🎨 Heights */
+  --height-navbar: 10vh; 
+  --height-main: calc(100vh - var(--height-navbar));
+}
+
+/* ---------------------------- */
+/* DARK MODE SUPPORT         */
+/* ---------------------------- */
+.dark {
+  --color-background: 20 20 25;
+  --color-foreground: 255 255 255;
+}
+
+/* ---------------------------- */
+/* CUSTOM FONT-FACES (if self-hosted) */
+/* Place fonts in /public/fonts/...     */
+/* ---------------------------- */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins-light';
+  src: url('/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* ---------------------------- */
+/* 🧩 CUSTOM UTILITY CLASSES     */
+/* ---------------------------- */
+
+@layer utilities {
+  .h-navbar {
+    height: var(--height-navbar);
+  }
+
+  .h-main-content {
+    height: var(--height-main);
+  }
+}
+
+
+@layer components {
+  .roboto-condensed-medium {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+  }
+
+  .meow-script-regular {
+    font-family: "Meow Script", cursive;
+    font-weight: 400;
+  }
+
+  .lavishly-yours-regular {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 550;
+  }
+}
+
+.test{
+  color: rgb(47, 48, 46);
+}
