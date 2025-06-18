@@ -38,7 +38,6 @@
   /* 🎨 Heights */
   --height-navbar: 10vh;
   --height-main: calc(100vh - var(--height-navbar) - 64px);
-}
 
   /* 📱 Page Padding (responsive) */
   --padding-page: 1%; /* default (mobile) */
