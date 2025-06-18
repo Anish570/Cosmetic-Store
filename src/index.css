@@ -1,20 +1,20 @@
-/* ---------------------------- */
-/* 🌐 FONT IMPORTS (Google)    */
-/* ---------------------------- */
+/* ==========================================================================
+   📦 FONT IMPORTS (Google Fonts)
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 
-/* ---------------------------- */
-/* 🎨 TAILWIND BASE IMPORT      */
-/* ---------------------------- */
+/* ==========================================================================
+      🌀 TAILWIND BASE IMPORT
+      ========================================================================== */
 @import "tailwindcss";
 
-/* ---------------------------- */
-/* 🎯 DESIGN TOKENS FOR TAILWIND */
-/* (tailwind v4.1 @theme block) */
-/* ---------------------------- */
+/* ==========================================================================
+      🎨 THEME DESIGN TOKENS
+      ========================================================================== */
 @theme {
+  /* 🌈 Colors */
   --color-primary: black;
   --color-primary-light: gray;
   --color-secondary: plum;
@@ -22,56 +22,60 @@
   --color-muted: lightgray;
   --color-background: white;
   --color-foreground: pink;
-  --color-btn-primary:rgb(252, 173, 173);
-  /* Fonts */
+  --color-btn-primary: rgb(252, 173, 173);
+  --color-lightblack: 30 30 30;
+
+  /* 🔤 Fonts */
   --font-heading: "Playfair Display", serif;
   --font-poppins: "Poppins", sans-serif;
   --font-roboto: "Roboto Condensed", sans-serif;
 
-  /* Sizes / Shadows */
+  /* 📐 Sizes & Layout */
   --text-smalldevice: 0.875rem;
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --color-lightblack: 30 30 30;
-  
-  /* 🎨 Heights */
-  --height-navbar: 10vh; 
+
+  --height-navbar: 10vh;
   --height-main: calc(100vh - var(--height-navbar));
+
+  /* 📱 Page Padding (responsive) */
+  --padding-page: 1%; /* default (mobile) */
+  --padding-page-sm: 4%;
+  --padding-page-md: 7%;
+  --padding-page-lg: 10%;
 }
 
-/* ---------------------------- */
-/* DARK MODE SUPPORT         */
-/* ---------------------------- */
+/* ==========================================================================
+      🌚 DARK MODE OVERRIDES
+      ========================================================================== */
 .dark {
-  --color-background: 20 20 25;
-  --color-foreground: 255 255 255;
+  --color-background: rgb(20, 20, 25);
+  --color-foreground: rgb(255, 255, 255);
 }
 
-/* ---------------------------- */
-/* CUSTOM FONT-FACES (if self-hosted) */
-/* Place fonts in /public/fonts/...     */
-/* ---------------------------- */
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
+/* ==========================================================================
+      💻 RESPONSIVE BREAKPOINTS (using Tailwind's breakpoints)
+      ========================================================================== */
+  @media (min-width: 640px) {
+    :root {
+      --padding-page: var(--padding-page-sm);
+    }
+  }
 
-@font-face {
-  font-family: 'Poppins-light';
-  src: url('/fonts/Poppins/Poppins-Light.ttf') format('truetype');
-  font-weight: 300;
-}
+  @media (min-width: 768px) {
+    :root {
+      --padding-page: var(--padding-page-md);
+    }
+  }
 
-@font-face {
-  font-family: 'Poppins-bold';
-  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
-  font-weight: 700;
-}
+  @media (min-width: 1024px) {
+    :root {
+      --padding-page: var(--padding-page-lg);
+    }
+  }
 
-/* ---------------------------- */
-/* 🧩 CUSTOM UTILITY CLASSES     */
-/* ---------------------------- */
-
+/* ==========================================================================
+      🧩 UTILITIES (Custom)
+      ========================================================================== */
 @layer utilities {
   .h-navbar {
     height: var(--height-navbar);
@@ -80,9 +84,20 @@
   .h-main-content {
     height: var(--height-main);
   }
+
+  /* .page-padding {
+    padding-left: var(--padding-page);
+    padding-right: var(--padding-page);
+  } */
+}
+@utility page-padding{
+  padding-left: var(--padding-page);
+  padding-right: var(--padding-page);
 }
 
-
+/* ==========================================================================
+      🧩 COMPONENTS (Fonts)
+      ========================================================================== */
 @layer components {
   .roboto-condensed-medium {
     font-family: "Roboto Condensed", sans-serif;
@@ -98,8 +113,4 @@
     font-family: "Lavishly Yours", cursive;
     font-weight: 550;
   }
-}
-
-.test{
-  color: rgb(47, 48, 46);
 }
