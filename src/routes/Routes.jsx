@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import HomePage from "../Pages/HomePage/HomePage";
 import ErrorBoundary from "../Components/ErrorBoundry";
-import { Notfound } from "../components/NotFound";
+import NotFound from "../components/NotFound";
 
 
 const Router = createBrowserRouter([
@@ -16,7 +16,7 @@ const Router = createBrowserRouter([
 
         ],
     },
-    { path: "*", element: <Notfound />, errorElement: <ErrorBoundary /> }, // Handle unknown routes
+    { path: "*", element: <NotFound />, errorElement: <ErrorBoundary /> }, // Handle unknown routes
 ]);
 
 export default Router;
