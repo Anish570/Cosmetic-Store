@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import HomePage from "../Pages/HomePage/HomePage";
-import ErrorBoundary from "../Components/ErrorBoundry";
+import ErrorBoundary from "../components/ErrorBoundry";
 import NotFound from "../components/NotFound";
 
 
@@ -12,7 +12,6 @@ const Router = createBrowserRouter([
         errorElement: <ErrorBoundary />, // Added Error Boundary
         children: [
             { index: true, element: <HomePage /> },
-            // { path: "wishlist", element: LazyLoad(Wishlist) },
 
         ],
     },

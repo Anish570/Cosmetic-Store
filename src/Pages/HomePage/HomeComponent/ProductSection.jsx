@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../../../Components/ProductCard";
+import ProductCard from "../../../components/ProductCard";
 import SpecialCard from "./SpecialCard";
 
 const ProductSection = ({ products, desired_index = 3 }) => {
