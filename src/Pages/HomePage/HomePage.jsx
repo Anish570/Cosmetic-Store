@@ -2,14 +2,16 @@ import Slider from './Slider'
 import NewArrivals from './NewArrivals'
 import TopSold from './TopSold'
 import Reviews from './Reviews'
+import ExploreMore from './ExploreMore'
 
 const HomePage = () => {
     return (
-        <div className='h-main bg-gray-200'>
+        <div className='h-main '>
             <Slider />
             <div className='page-padding'>
-                <NewArrivals />
-                <TopSold />
+                <NewArrivals desired_index={3} />
+                <TopSold desired_index={5} />
+                <ExploreMore />
                 <Reviews />
             </div>
         </div>
