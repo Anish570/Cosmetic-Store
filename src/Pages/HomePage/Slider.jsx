@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import {
-    banner02, banner03
-} from '../../assets/images'
+
+import { banner02, banner03 } from '../../assets/images'
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0)

@@ -74,6 +74,7 @@
   .text-primary{
     @apply text-pink-700
   }
+
   .nav-background{
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(10px);
@@ -82,7 +83,6 @@
   .h-main {
     margin-top: var(--height-navbar);
     height: calc(95vh - var(--height-navbar));
-
   }
   /* .page-padding {
     padding-left: var(--padding-page);
