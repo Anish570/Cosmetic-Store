@@ -29,8 +29,7 @@
   --color-lightblack: 30 30 30;
 
   /* Heights */
-  --height-navbar: 10vh;
-  --height-main: calc(95vh - var(--height-navbar));
+  --height-navbar: 15vh;
   --height-footer: 5vh;
   --height-product-section: 100vh;
   --height-product-card: 300px;
@@ -71,8 +70,19 @@
 
 /* UTILITIES (Custom) */
 @layer utilities {
+
   .text-primary{
     @apply text-pink-700
+  }
+  .nav-background{
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(252, 173, 173, .4);
+  }
+  .h-main {
+    margin-top: var(--height-navbar);
+    height: calc(95vh - var(--height-navbar));
+
   }
   /* .page-padding {
     padding-left: var(--padding-page);
