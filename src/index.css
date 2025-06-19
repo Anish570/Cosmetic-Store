@@ -37,7 +37,7 @@
   --height-product-card-sm: 250px;
   --height-product-card-md: 350px;
   --height-product-card-lg: 400px;
-  --height-title: 15vh;
+  --height-title: 20vh;
   --height-title-sm: 10vh;
 
   /* responsive paddings */
@@ -67,9 +67,13 @@
     }
   }
 
+  
 
 /* UTILITIES (Custom) */
 @layer utilities {
+  .text-primary{
+    @apply text-pink-700
+  }
   /* .page-padding {
     padding-left: var(--padding-page);
     padding-right: var(--padding-page);
