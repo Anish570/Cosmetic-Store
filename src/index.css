@@ -1,21 +1,15 @@
-/* ==========================================================================
-   📦 FONT IMPORTS (Google Fonts)
-   ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+/* FONT IMPORTS (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
-/* ==========================================================================
-      🌀 TAILWIND BASE IMPORT
-      ========================================================================== */
+
+/* TAILWIND BASE IMPORT */
 @import "tailwindcss";
 
-/* ==========================================================================
-      🎨 THEME DESIGN TOKENS
-      ========================================================================== */
+
+/* THEME DESIGN TOKENS */
 @theme {
-  /* 🌈 Colors */
+  /* Colors */
   --color-primary: black;
   --color-primary-light: gray;
   --color-secondary: plum;
@@ -26,38 +20,35 @@
   --color-btn-primary: rgb(252, 173, 173);
   
   /* Fonts */
-  --color-lightblack: 30 30 30;
-  --font-heading: "Playfair Display", serif;
-  --font-poppins: "Poppins", sans-serif;
-  --font-roboto: "Roboto Condensed", sans-serif;
+  --font-matangi: "Matangi", sans-serif;
+  --font-julius-sans-one: "Julius Sans One", sans-serif;
 
-  /* 📐 Sizes & Layout */
+  /* Sizes & Layout */
   --text-smalldevice: 0.875rem;
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --color-lightblack: 30 30 30;
 
-  /* 🎨 Heights */
+  /* Heights */
   --height-navbar: 10vh;
-  --height-main: calc(90vh - var(--height-navbar));
+  --height-main: calc(95vh - var(--height-navbar));
+  --height-footer: 5vh;
+  --height-product-section: 100vh;
+  --height-product-card: 300px;
+  --height-product-card-sm: 250px;
+  --height-product-card-md: 350px;
+  --height-product-card-lg: 400px;
+  --height-title: 15vh;
+  --height-title-sm: 10vh;
 
-  /* 📱 Page Padding (responsive) */
+  /* responsive paddings */
   --padding-page: 1%; /* default (mobile) */
   --padding-page-sm: 4%;
   --padding-page-md: 7%;
   --padding-page-lg: 10%;
 }
 
-/* ==========================================================================
-      🌚 DARK MODE OVERRIDES
-      ========================================================================== */
-.dark {
-  --color-background: rgb(20, 20, 25);
-  --color-foreground: rgb(255, 255, 255);
-}
 
-/* ==========================================================================
-      💻 RESPONSIVE BREAKPOINTS (using Tailwind's breakpoints)
-      ========================================================================== */
+/* RESPONSIVE BREAKPOINTS (using Tailwind's breakpoints) */
   @media (min-width: 640px) {
     :root {
       --padding-page: var(--padding-page-sm);
@@ -76,42 +67,9 @@
     }
   }
 
-/* ==========================================================================
-      🧩 UTILITIES (Custom)
-      ========================================================================== */
+
+/* UTILITIES (Custom) */
 @layer utilities {
-  .h-navbar {
-    height: var(--height-navbar);
-  }
-
-  .h-main-content {
-    height: var(--height-main);
-  }
-
-  .text-smalldevice {
-    font-size: var(--text-smalldevice);
-  }
-
-  .shadow-custom {
-    box-shadow: var(--shadow-lg);
-  }
-
-  .bg-lightblack {
-    background-color: rgb(var(--color-lightblack));
-  }
-
-  .text-lightblack {
-    color: rgb(var(--color-lightblack));
-  }
-
-  .bg-btn-primary {
-    background-color: var(--color-btn-primary);
-  }
-
-  .text-btn-primary {
-    color: var(--color-btn-primary);
-  }
-
   /* .page-padding {
     padding-left: var(--padding-page);
     padding-right: var(--padding-page);
@@ -122,42 +80,16 @@
   padding-right: var(--padding-page);
 }
 
-/* ==========================================================================
-      🧩 COMPONENTS (Fonts)
-      ========================================================================== */
+
+/* COMPONENTS (Fonts) */
 @layer components {
-  .roboto-condensed-medium {
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: 500;
-  }
-
-  .meow-script-regular {
-    font-family: "Meow Script", cursive;
-    font-weight: 400;
-  }
-
-  .lavishly-yours-regular {
-    font-family: "Lavishly Yours", cursive;
-    font-weight: 550;
+  .matangi-semi-bold {
+    font-family: "Matangi", sans-serif;
+    font-weight: 600;
   }
 
   .julius-sans-one {
     font-family: "Julius Sans One", sans-serif;
     font-weight: 400;
   }
-  .heading-font {
-    font-family: var(--font-heading);
-  }
-
-  .poppins-font {
-    font-family: var(--font-poppins);
-  }
-
-  .roboto-font {
-    font-family: var(--font-roboto);
-  }
-}
-
-.test {
-  color: rgb(47, 48, 46);
 }
