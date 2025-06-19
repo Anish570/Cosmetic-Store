@@ -1,13 +1,13 @@
-import ProductSection from './HomeComponent/ProductSection'
 import SectionHeading from './HomeComponent/SectionHeading'
 import Products from '../../SampleDatas/Products'
-const NewArrivals = () => {
+import ProductSection from './HomeComponent/ProductSection'
+const ExploreMore = () => {
     return (
         <div>
-            <SectionHeading title="New Arrivals" />
+            <SectionHeading title="Explore More" />
             <ProductSection products={Products} />
         </div>
     )
 }
 
-export default NewArrivals
+export default ExploreMore 

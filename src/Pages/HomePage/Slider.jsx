@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { banner02, banner03
-} from '../../assets/images'
+
+import { banner02, banner03 } from '../../assets/images'
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const images = [
-        banner01, banner02, banner03, banner02, banner01, banner03
+        banner02, banner03, banner02, banner03
     ]
 
     const handlePrev = () => {
@@ -76,7 +76,7 @@ const Slider = () => {
                 <div className='absolute top-6 left-6 bg-accent/20 backdrop-blur-sm p-2 rounded-full border border-accent/30 shadow-lg'>
                     <div className='w-2 h-2 bg-accent rounded-full'></div>
                 </div>
-              
+
             </section>
         </main>
     )
