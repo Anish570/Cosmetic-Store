@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import {
-    banner01, banner02, banner03
+import { useState } from 'react'
+import { banner02, banner03
 } from '../../assets/images'
 
 const Slider = () => {
