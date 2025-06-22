@@ -6,7 +6,7 @@ import ExploreMore from './ExploreMore'
 
 const HomePage = () => {
     return (
-        <div className='h-main '>
+        <div className=''>
             <Slider />
             <div className='page-padding'>
                 <NewArrivals desired_index={3} />
